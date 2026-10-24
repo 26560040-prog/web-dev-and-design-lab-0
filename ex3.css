@@ -1,0 +1,75 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f4f5f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 900px;
+      background: #ffffff;
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #1a202c;
+      margin-bottom: 6px;
+    }
+
+    p.subtitle {
+      font-size: 13px;
+      color: #718096;
+      margin-bottom: 24px;
+    }
+
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      background-color: #1e293b;
+      border-radius: 8px;
+      display: flex;
+      position: relative;
+    }
+
+    .marquee-content {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      animation: scroll 15s linear infinite;
+    }
+
+    .marquee-container:hover .marquee-content {
+      animation-play-state: paused;
+    }
+
+    .marquee-item {
+      padding: 16px 32px;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 15px;
+      user-select: none;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%); /* Dịch chuyển đúng 1 nửa (nửa nội dung lặp) */
+      }
+    }
